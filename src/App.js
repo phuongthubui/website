@@ -9,13 +9,13 @@ function App() {
       <Globe
         polygonsData={globeJson.features}
         polygonCapColor={(geometry) => {
-          return geometry.properties.visited ? "pink" : "purple";
+          return geometry.properties.visited ? "pink" : "grey";
         }}
         polygonSideColor={(geometry) => {
-          return geometry.properties.visited ? "purple" : "pink";
+          return geometry.properties.visited ? "pink" : "grey";
         }}
         polygonStrokeColor={(geometry) => {
-          return geometry.properties.visited ? "purple" : "pink";
+          return geometry.properties.visited ? "pink" : "grey";
         }}
         polygonLabel={(geometry) => {
           return geometry.properties.name;
