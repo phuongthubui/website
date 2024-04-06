@@ -1,23 +1,29 @@
-import logo from './logo.svg';
-import './App.css';
+import logo from "./logo.svg";
+import "./App.css";
+import Globe from "react-globe.gl";
+import globeJson from "./countries.json";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="cursor-move">
+      <Globe
+        polygonsData={globeJson.features}
+        polygonCapColor={(geometry) => {
+          return geometry.properties.visited ? "pink" : "#F7F2F2";
+        }}
+        polygonSideColor={(geometry) => {
+          return geometry.properties.visited ? "purple" : "blue";
+        }}
+        polygonStrokeColor={(geometry) => {
+          return geometry.properties.visited ? "purple" : "blue";
+        }}
+        polygonLabel={(geometry) => {
+          return geometry.properties.name;
+        }}
+        onPolygonClick={(geometry) => geometry.properties.visited}
+        polygonAltitude={0.005}
+        polygonsTransitionDuration={300}
+      />
     </div>
   );
 }
