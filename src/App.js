@@ -9,7 +9,7 @@ function App() {
       <Globe
         polygonsData={globeJson.features}
         polygonCapColor={(geometry) => {
-          return geometry.properties.visited ? "pink" : "#818589";
+          return geometry.properties.visited ? "pink" : "#A9A9A9";
         }}
         polygonSideColor={(geometry) => {
           return geometry.properties.visited ? "#f78fa9" : "#808080";
