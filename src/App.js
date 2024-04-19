@@ -22,7 +22,7 @@ function App() {
         }}
         onPolygonClick={(geometry) => geometry.properties.visited}
         polygonAltitude={0.01}
-        polygonsTransitionDuration={3000}
+        polygonsTransitionDuration={300}
       />
     </div>
   );
