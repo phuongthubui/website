@@ -12,7 +12,7 @@ function App() {
           return geometry.properties.visited ? "pink" : "grey";
         }}
         polygonSideColor={(geometry) => {
-          return geometry.properties.visited ? "#f78fa9" : "grey";
+          return geometry.properties.visited ? "#f78fa9" : "#808080";
         }}
         polygonStrokeColor={(geometry) => {
           return geometry.properties.visited ? "#808080" : "#f78fa9";
