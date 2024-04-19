@@ -1,4 +1,4 @@
-import logo from "./logo.svg";
+import logo from "./pb.png";
 import "./App.css";
 import Globe from "react-globe.gl";
 import globeJson from "./countries.json";
