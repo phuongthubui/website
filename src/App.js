@@ -1,4 +1,4 @@
-import logo from "./pb.png";
+import logo from "./logo.svg";
 import "./App.css";
 import Globe from "react-globe.gl";
 import globeJson from "./countries.json";
@@ -9,7 +9,7 @@ function App() {
       <Globe
         polygonsData={globeJson.features}
         polygonCapColor={(geometry) => {
-          return geometry.properties.visited ? "pink" : "#949494";
+          return geometry.properties.visited ? "pink" : "#818589";
         }}
         polygonSideColor={(geometry) => {
           return geometry.properties.visited ? "#f78fa9" : "#808080";
