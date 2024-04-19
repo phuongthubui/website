@@ -15,7 +15,7 @@ function App() {
           return geometry.properties.visited ? "#f78fa9" : "grey";
         }}
         polygonStrokeColor={(geometry) => {
-          return geometry.properties.visited ? "grey" : "#f78fa9";
+          return geometry.properties.visited ? "#808080" : "#f78fa9";
         }}
         polygonLabel={(geometry) => {
           return geometry.properties.name;
